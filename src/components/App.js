@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
+import Filter from "./Filter/Filter";
+import ListPersons from "./ListPersons/ListPersons";
 import getData from "../services/api";
+import addId from "../services/addId";
 import Loader from "react-loader-spinner";
 
 const App = () => {
@@ -13,13 +16,17 @@ const App = () => {
       .catch((err) => setIsError(!!err))
       .finally(() => setIsLoading(false));
   }, []);
-  console.log(data);
+
+  addId(data);
+
   return (
     <div>
+      <Filter />
+      {isError && <p>Error please reload the page!</p>}
       {isLoading && (
         <Loader type="Oval" color="#00BFFF" height={300} width={300} />
       )}
-      {isError && <div>Error please reload the page!</div>}
+      {data.length > 0 && <ListPersons data={data} />}
     </div>
   );
 };
