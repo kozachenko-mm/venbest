@@ -3,11 +3,11 @@ import CardPerson from '../CardPerson/CardPerson'
 
 const ListPersons = ({data}) => {
   return (
-    <div>
+    <ul>
       {data.map((item) => (
         <CardPerson key={item.id} data={item} />
       ))}
-    </div>
+    </ul>
   );
 };
 

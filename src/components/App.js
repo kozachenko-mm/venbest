@@ -3,12 +3,14 @@ import Filter from "./Filter/Filter";
 import ListPersons from "./ListPersons/ListPersons";
 import getData from "../services/api";
 import addId from "../services/addId";
+import changeData from "../services/changeData";
 import Loader from "react-loader-spinner";
 
 const App = () => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
+  const [filtered, setFiltered] = useState(data);
 
   useEffect(() => {
     getData()
@@ -17,16 +19,49 @@ const App = () => {
       .finally(() => setIsLoading(false));
   }, []);
 
-  addId(data);
+  useEffect(() => {
+    setFiltered(data);
+    addId(data);
+    changeData(data);
+  }, [data]);
+
+  const search = (form) => {
+    let currentList = data,
+        newList = [];
+
+    newList = currentList.filter((el) =>
+      el.name.toLowerCase().indexOf(form.name.trim().toLowerCase()) !== -1
+        ? el.name
+        : null
+    );
+    setFiltered(newList);
+    currentList = newList;
+    
+    newList = currentList.filter((el) =>
+      el.lastname.toLowerCase().indexOf(form.lastname.trim().toLowerCase()) !== -1
+        ? el.lastname
+        : null
+    );
+    setFiltered(newList);
+    currentList = newList;
+    
+    newList = currentList.filter((el) =>
+      el.age.indexOf(form.age.trim()) !== -1 ? el.age : null
+    );
+    setFiltered(newList);
+    currentList = newList;
+  };
+
+  console.log(filtered);
 
   return (
     <div>
-      <Filter />
+      <Filter search={search} />
       {isError && <p>Error please reload the page!</p>}
       {isLoading && (
         <Loader type="Oval" color="#00BFFF" height={300} width={300} />
       )}
-      {data.length > 0 && <ListPersons data={data} />}
+      {data.length > 0 && <ListPersons data={filtered} />}
     </div>
   );
 };

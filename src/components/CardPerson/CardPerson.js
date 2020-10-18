@@ -2,13 +2,13 @@ import React from "react";
 
 const CardPerson = ({ data }) => {
   return (
-    <div>
+    <li>
       <p>
         {data.name} {data.lastname}
       </p>
       <p>вік: {data.age}</p>
       <p>стать: {data.sex === "m" ? "чоловіча" : "жіноча"}</p> 
-    </div>
+    </li>
   );
 };
 
