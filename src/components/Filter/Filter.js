@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
+
 import styles from "./Filter.module.css";
 
 const initialState = {
@@ -10,6 +12,9 @@ const initialState = {
 };
 
 export default class Filter extends Component {
+  static propTypes = {
+    filter: PropTypes.func.isRequired,
+  };
   state = initialState;
 
   handleChange = ({ target }) => {

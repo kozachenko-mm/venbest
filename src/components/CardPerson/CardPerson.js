@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import styles from "./CardPerson.module.css";
 
 const CardPerson = ({ data }) => {
@@ -18,3 +20,7 @@ const CardPerson = ({ data }) => {
 };
 
 export default CardPerson;
+CardPerson.prototype = {
+  data: PropTypes.arrayOf(PropTypes.object).isRequired
+
+}
