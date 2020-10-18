@@ -70,7 +70,7 @@ const App = () => {
         <Loader type="Oval" color="#00BFFF" height={300} width={300} />
       )}
       {data.length > 0 && <ListPersons data={filtered} />}
-      {!filtered.length && <p>Немає збігів!</p>}
+      {data.length > 0 && filtered.length === 0 && <p>Немає збігів!</p>}
     </div>
   );
 };
