@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import Filter from "./Filter/Filter";
-import ListPersons from "./ListPersons/ListPersons";
-import getData from "../services/api";
-import addId from "../services/addId";
-import changeData from "../services/changeData";
+import Filter from "../Filter/Filter";
+import ListPersons from "../ListPersons/ListPersons";
+import getData from "../../services/api";
+import addId from "../../services/addId";
+import changeDataAge from "../../services/changeDataAge";
 import Loader from "react-loader-spinner";
+import styles from './App.module.css'
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -22,9 +23,9 @@ const App = () => {
   useEffect(() => {
     setFiltered(data);
     addId(data);
-    changeData(data);
+    changeDataAge(data);
   }, [data]);
-  // /////////////////////////////////////
+
   const handleFilter = (form) => {
     let currentList = data,
       newList = [];
@@ -62,7 +63,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className={styles.wrapper}>
       <Filter filter={handleFilter} />
       {isError && <p>Error please reload the page!</p>}
       {isLoading && (

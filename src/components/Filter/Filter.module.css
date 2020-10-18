@@ -1,0 +1,129 @@
+.filter {
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.title {
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.form {
+    display: flex;
+    justify-content: space-around;
+}
+
+.group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input {
+    font-size: 16px;
+    padding: 8px 10px 2px;
+    display: block;
+    width: 140px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.label {
+    color: #999;
+    font-size: 18px;
+    position: absolute;
+    pointer-events: none;
+    left: 10px;
+    top: -20px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+.input:focus~.label {
+    /* top: -15px; */
+    /* font-size: 14px; */
+    color: #5264AE;
+}
+
+
+/* BOTTOM BARS ================================= */
+.bar {
+    position: relative;
+    display: block;
+    width: 160px;
+}
+
+.bar:before,
+.bar:after {
+    content: "";
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    position: absolute;
+    background: #5264AE;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+    left: 50%;
+}
+
+.bar:after {
+    right: 50%;
+}
+
+/* active state */
+.input:focus~.bar:before,
+.input:focus~.bar:after {
+    width: 50%;
+}
+
+.sex {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: #999;
+}
+
+.sex span {
+    margin-top: -20px;
+}
+
+.sex div {
+    margin-top: 10px;
+}
+
+.sex:not(:disabled):active+label::before {
+    background-color: #b3d7ff;
+    border-color: #b3d7ff;
+}
+
+/*  */
+.button {
+    border: none;
+    padding: 15px 10px;
+    margin: -20px 0 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    background-color: #2cb889;
+    border-radius: 10px;
+}
+
+.button:focus,
+.button:hover {
+    cursor: pointer;
+    outline: none;
+}
