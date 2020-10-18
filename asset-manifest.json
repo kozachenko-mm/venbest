@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/venbest/static/css/main.5582db04.chunk.css",
-    "main.js": "/venbest/static/js/main.b0d0c267.chunk.js",
-    "main.js.map": "/venbest/static/js/main.b0d0c267.chunk.js.map",
+    "main.js": "/venbest/static/js/main.e8b789d2.chunk.js",
+    "main.js.map": "/venbest/static/js/main.e8b789d2.chunk.js.map",
     "runtime-main.js": "/venbest/static/js/runtime-main.5ac2361c.js",
     "runtime-main.js.map": "/venbest/static/js/runtime-main.5ac2361c.js.map",
-    "static/js/2.4d88a073.chunk.js": "/venbest/static/js/2.4d88a073.chunk.js",
-    "static/js/2.4d88a073.chunk.js.map": "/venbest/static/js/2.4d88a073.chunk.js.map",
+    "static/js/2.3af2c9b2.chunk.js": "/venbest/static/js/2.3af2c9b2.chunk.js",
+    "static/js/2.3af2c9b2.chunk.js.map": "/venbest/static/js/2.3af2c9b2.chunk.js.map",
     "index.html": "/venbest/index.html",
-    "precache-manifest.a2e58880a1a511410990da8b6991c1f0.js": "/venbest/precache-manifest.a2e58880a1a511410990da8b6991c1f0.js",
+    "precache-manifest.c69013e3e3e3d9da3522da5a10e77620.js": "/venbest/precache-manifest.c69013e3e3e3d9da3522da5a10e77620.js",
     "service-worker.js": "/venbest/service-worker.js",
     "static/css/main.5582db04.chunk.css.map": "/venbest/static/css/main.5582db04.chunk.css.map",
-    "static/js/2.4d88a073.chunk.js.LICENSE.txt": "/venbest/static/js/2.4d88a073.chunk.js.LICENSE.txt"
+    "static/js/2.3af2c9b2.chunk.js.LICENSE.txt": "/venbest/static/js/2.3af2c9b2.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.5ac2361c.js",
-    "static/js/2.4d88a073.chunk.js",
+    "static/js/2.3af2c9b2.chunk.js",
     "static/css/main.5582db04.chunk.css",
-    "static/js/main.b0d0c267.chunk.js"
+    "static/js/main.e8b789d2.chunk.js"
   ]
 }
