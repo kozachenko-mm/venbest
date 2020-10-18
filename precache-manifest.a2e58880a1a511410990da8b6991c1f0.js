@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "99fe38174a6595e02811fa96f8f10c56",
+    "revision": "890d3b88e7495337049921db81327bc8",
     "url": "/venbest/index.html"
   },
   {
-    "revision": "c72821ffca2550600357",
+    "revision": "c09a0c4dd8d9f34bbde3",
     "url": "/venbest/static/css/main.5582db04.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/venbest/static/js/2.4d88a073.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c72821ffca2550600357",
-    "url": "/venbest/static/js/main.c93cca4e.chunk.js"
+    "revision": "c09a0c4dd8d9f34bbde3",
+    "url": "/venbest/static/js/main.b0d0c267.chunk.js"
   },
   {
     "revision": "f81f2e6c035a2c893a03",
